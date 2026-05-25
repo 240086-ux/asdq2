@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Realtime Monitor - Дуйсенбек Алмас</title>
+  <title>Realtime Monitor - Максим Байжиянов</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
@@ -21,7 +21,7 @@
 
     <!-- Сессия учёбы -->
     <div class="glass border border-zinc-700 rounded-3xl p-6 mb-6">
-      <h2 class="text-lg mb-4">Дуйсенбек Алмас Өлфарабилы</h2>
+      <h2 class="text-lg mb-4">Максим Байжиянов</h2>
       
       <div class="flex items-center gap-4 mb-6">
         <div class="text-6xl font-bold text-emerald-400">3 сек.</div>
@@ -44,9 +44,9 @@
     <!-- Профиль -->
     <div class="glass border border-zinc-700 rounded-3xl p-6">
       <div class="flex items-center gap-4 mb-6">
-        <div class="w-14 h-14 bg-green-500 rounded-2xl flex items-center justify-center text-3xl">Д</div>
+        <div class="w-14 h-14 bg-green-500 rounded-2xl flex items-center justify-center text-3xl font-bold">М</div>
         <div>
-          <h3 class="font-semibold">Дуйсенбек Алмас Өлфарабилы</h3>
+          <h3 class="font-semibold">Максим Байжиянов</h3>
           <div class="flex gap-2 text-sm">
             <span class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full">В сети</span>
           </div>
@@ -88,7 +88,7 @@
   <!-- Правая панель -->
   <div class="w-1/2 p-6 overflow-auto">
     <div class="flex justify-between items-center mb-6">
-      <h2 class="text-2xl font-bold">Дуйсенбек Алмас Өлфарабилы</h2>
+      <h2 class="text-2xl font-bold">Максим Байжиянов</h2>
       <div class="flex gap-2">
         <div class="bg-emerald-500/10 text-emerald-400 px-4 py-1 rounded-full text-sm">В сети</div>
       </div>
@@ -122,16 +122,23 @@
         <div class="bg-zinc-900 p-4 rounded-2xl flex items-center justify-between">
           <div class="flex items-center gap-3">
             <span class="text-yellow-400 font-bold text-xl">1</span>
-            <div>Ислам Бекишев</div>
+            <div>Айдар Султанов</div>
           </div>
-          <div class="text-emerald-400 font-medium">1664 ч 51м</div>
+          <div class="text-emerald-400 font-medium">1428 ч 15м</div>
         </div>
         <div class="bg-zinc-900 p-4 rounded-2xl flex items-center justify-between">
           <div class="flex items-center gap-3">
             <span class="text-zinc-400 font-bold text-xl">2</span>
-            <div>Махаббат Канатова</div>
+            <div>Алина Каримова</div>
           </div>
-          <div class="text-emerald-400 font-medium">1м 21с</div>
+          <div class="text-emerald-400 font-medium">987 ч 42м</div>
+        </div>
+        <div class="bg-zinc-900 p-4 rounded-2xl flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-zinc-400 font-bold text-xl">3</span>
+            <div>Данил Ержанов</div>
+          </div>
+          <div class="text-emerald-400 font-medium">756 ч 10м</div>
         </div>
       </div>
     </div>
@@ -155,24 +162,25 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
-// Симуляция работы с Supabase
+// === НАСТРОЙКИ SUPABASE (замени на свои) ===
+const supabaseUrl = 'https://твой-проект.supabase.co';
+const supabaseAnonKey = 'твой-anon-key';
+
+const supabase = Supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+// Простые функции-заглушки
 async function continueSession() {
-  alert("Сессия продолжена!\n\n(Здесь будет вызов Supabase для обновления study_sessions)");
+  alert("Сессия продолжена!");
 }
 
 async function endSession() {
-  if (confirm("Завершить сессию?")) {
-    alert("Сессия завершена!\n\nДанные отправлены в Supabase");
-    // Здесь будет реальный код Supabase
-  }
+  alert("Сессия завершена!\n\n(Здесь будет подключение к Supabase)");
 }
 
-// Пример функции для Supabase (позже перенесём в отдельный JS)
-async function awardAchievement(userId, code) {
-  console.log(`Выдаём достижение ${code} пользователю ${userId}`);
-  // Реализация с Supabase будет ниже
-}
+// Можно позже добавить реальные функции checkAchievements и awardAchievement
 </script>
 
 </body>
