@@ -637,4 +637,92 @@
         <div class="timeline-desc">Величайшая трагедия. Варховник Хорус предаёт Императора, половина легионов переходит к Хаосу. Осада Терры. Трон.</div>
       </div>
     </div>
-    <d
+    <div class="timeline-item fade-in">
+      <div class="timeline-content">
+        <div class="timeline-year">М31 — М41</div>
+        <div class="timeline-event">Эпоха Империума</div>
+        <div class="timeline-desc">Инквизиция. Ecclesiarchy. Бесконечные войны. Медленный упадок и всё более фанатичная вера в Императора.</div>
+      </div>
+      <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+      <div></div>
+    </div>
+    <div class="timeline-item fade-in">
+      <div></div>
+      <div class="timeline-dot"><div class="timeline-dot-inner" style="background:#FF3333;box-shadow:0 0 10px rgba(255,50,50,0.8);"></div></div>
+      <div class="timeline-content">
+        <div class="timeline-year">999.M41</div>
+        <div class="timeline-event">Эпоха Скорби</div>
+        <div class="timeline-desc">Великий Разлом раскалывает галактику. Жиллиман пробуждается. Война без конца и без победы.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="codex-section" id="codex">
+  <p class="section-sub">Руководство для Воинов</p>
+  <h2 class="section-title">Кодекс Астартес</h2>
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <span class="ornament-center">✦</span>
+    <div class="ornament-line right"></div>
+  </div>
+  <div class="codex-cards">
+    <div class="codex-card fade-in">
+      <div class="codex-num">I</div>
+      <div class="codex-title">Организация Ордена</div>
+      <p class="codex-body">Каждый Орден насчитывает тысячу Астартес, разделённых на десять рот. Первая рота — ветераны. Десятая — скауты.</p>
+    </div>
+    <div class="codex-card fade-in">
+      <div class="codex-num">II</div>
+      <div class="codex-title">Тактические Доктрины</div>
+      <p class="codex-body">Кодекс предписывает применение отрядов по типу врага: Тактические, Девастаторы и Терминаторы. Гибкость — ключ к победе.</p>
+    </div>
+    <div class="codex-card fade-in">
+      <div class="codex-num">III</div>
+      <div class="codex-title">Геносемя и Культ</div>
+      <p class="codex-body">Каждый Орден несёт наследие одного из примархов. Геносемя определяет физические черты воина.</p>
+    </div>
+    <div class="codex-card fade-in">
+      <div class="codex-num">IV</div>
+      <div class="codex-title">Знаки Отличия</div>
+      <p class="codex-body">Цвета и символы каждого ордена несут многовековую историю. Герб на наплечнике — биография солдата.</p>
+    </div>
+    <div class="codex-card fade-in">
+      <div class="codex-num">V</div>
+      <div class="codex-title">Боевые Роли</div>
+      <p class="codex-body">От Апотекария до Техномарина — каждая специализация незаменима. Орден функционирует как единый организм.</p>
+    </div>
+    <div class="codex-card fade-in">
+      <div class="codex-num">VI</div>
+      <div class="codex-title">Верность Трону</div>
+      <p class="codex-body">Над всем стоит верность Императору. Сомнение — начало ереси. Ересь — путь к смерти.</p>
+    </div>
+  </div>
+</section>
+
+<div class="quote-banner">
+  <p class="quote-text">«Не отступайте. Не сомневайтесь. Умрите с именем Императора на устах — и этого будет достаточно.»</p>
+  <p class="quote-attr">— Последние слова Капитана Ваэлса Антара, Битва при Агриппине</p>
+</div>
+
+<footer>
+  <span class="footer-aquila">☥</span>
+  <p class="footer-title">Warhammer 40,000</p>
+  <p class="footer-text">Основан на вселенной Games Workshop · Fansite · Некоммерческий проект</p>
+  <p style="margin-top:1rem; font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.4em; color:rgba(201,168,76,0.2); text-transform:uppercase;">
+    Для блага Империума · Смерть ксеносам · Смерть еретикам
+  </p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
